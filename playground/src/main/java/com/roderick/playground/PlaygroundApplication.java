@@ -48,8 +48,6 @@ public class PlaygroundApplication implements CommandLineRunner {
         System.out.println("\nFinding the phrase for Malphite using getPhrase: \n"+repo.findByChampName("Malphite").getPhrase()); // this still prints id, even though I just want phrase
 		System.out.println("=================================================================\nfinding by type \"Marksman\"");
 		repo.findByType("Marksman").forEach(System.out::println);
-
-        System.exit(0);
     }
 
 }
