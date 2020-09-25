@@ -9,6 +9,7 @@ import java.util.List;
 
 
 public interface ChampionRepository extends MongoRepository<Champion, String> {
+    public List<Champion> findAll();
     public Champion findByChampName(String champName);
     public List<Champion> findByRole(String role);
    @Query(value="{ 'champName' : ?0 }",fields="{ 'phrase' : 1}") //this runs a query that uses value to look up and will return only the fields set to 1
@@ -16,7 +17,5 @@ public interface ChampionRepository extends MongoRepository<Champion, String> {
     public List<Champion> findByType(String type);
   //  public List<String> findCounterTo(String name);
  //   public List<String> findCounteredBy(String name);
-
-
 
 }
